@@ -45,3 +45,19 @@ As soon as the block issuer configured, run the node with:
 ```shell
 parity --config classic_aura.toml
 ```
+
+### Run the docker container
+
+The docker container can be used to integrate the local testnet in your testing environmnet. Please refer to example of [the Docker Compose configuration file](docker-compose.yml) for reference.
+
+Prior to running the container, go to the bottom of [the genesis file](classic_aura.json) and add accounts that will have some _ether_ prefunded.  
+
+To try the docker container, invoke:
+```shell
+$ docker-compose up --build
+```
+
+To stop the container:
+```shell
+$ docker-compose down
+```
